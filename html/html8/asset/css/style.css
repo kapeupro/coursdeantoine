@@ -114,3 +114,31 @@ strong {
     font-weight: bold;
 }
 
+/* learn */
+#learn {
+    display: flex;
+    flex-flow: row nowrap;
+    background-color: #fff;
+}
+#learn .learn_img{
+    width:50%;
+}
+#learn .learn_img img {
+    width:100%;
+    vertical-align: bottom;
+}
+#learn .learn_logo{
+    width:50%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /*align-items: center;*/
+    padding: 1rem;
+}
+
+#learn .learn_logo img {
+    width: 35%;
+    display:block;
+    margin: 1rem auto;
+}
