@@ -33,6 +33,9 @@ strong {
 .wrap2 {
     max-width: 1300px;width:100%;margin: 0 auto;
 }
+.wrap3{
+    max-width: 500px;width:100%;margin: 0 auto;
+}
 
 #container {
     min-height: 100vh;
@@ -202,4 +205,33 @@ strong {
 
 #testimonial .testi_box:nth-child(2n+1) .testi__text {
     order:2;
+}
+/* contact */
+#contact {
+    padding: 5rem 1rem;
+    text-align: center;
+}
+#contact h2 {
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+}
+#contact input, #contact textarea{
+    width:100%;
+    padding: 1rem;
+    background-color: #fff;
+    border:none;
+    border-radius: 10px;
+    margin-bottom: 1.3rem;
+}
+#contact textarea {
+    resize: none;
+    min-height: 100px;
+}
+#contact input[type=submit] {
+    cursor: pointer;
+    transition: all .5s;
+}
+#contact input[type=submit]:hover {
+    background-color: var(--vertclair);
+    color:#fff;
 }
