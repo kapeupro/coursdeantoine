@@ -7,6 +7,9 @@
     margin: 0;
     box-sizing: border-box;
 }
+html {
+    scroll-behavior: smooth;
+}
 body {
     background-color: #ddd;
     font-family: 'Quicksand', sans-serif;
@@ -234,4 +237,57 @@ strong {
 #contact input[type=submit]:hover {
     background-color: var(--vertclair);
     color:#fff;
+}
+/* footer */
+#footer {
+    background-color: var(--vert);
+    color: #fff;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+#footer .menufooter {
+    font-size: 1.3rem;
+}
+#footer .reseau ul {
+    display: flex;
+    flex-flow: row nowrap;
+}
+#footer .reseau ul li {
+    margin-left: 1rem;
+}
+#footer .reseau ul i {
+    font-size: 3rem;
+}
+#footer .reseau ul a:hover i {
+    color:#000;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 980px) {
+
+    #partenaire .wrap {
+        flex-flow: row wrap;
+    }
+    #partenaire .shadow {
+        width:48%;
+        margin-bottom: 2rem;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    #partenaire .shadow {
+        width:90%;
+        margin-left: 5%;
+    }
+    #footer {
+        flex-flow: column wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+    #footer > div {
+        margin-bottom: 1rem;
+    }
 }
