@@ -1,0 +1,116 @@
+:root {
+    --vert: #4f805d;
+    --vertclair: #8bb092;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #ddd;
+    font-family: 'Quicksand', sans-serif;
+}
+ul {
+    list-style: none;
+}
+a {
+    color:#fff;
+    text-decoration:none;
+}
+strong {
+    font-size: 1.6rem;
+    font-family: 'Libre Baskerville', serif;
+}
+.shadow {
+    -webkit-box-shadow: 0 10px 6px -6px var(--vertclair);
+    -moz-box-shadow: 0 10px 6px -6px var(--vertclair);
+    box-shadow: 0 10px 6px -6px var(--vertclair);
+}
+.wrap {
+    max-width: 1200px;width:100%;margin: 0 auto;
+}
+.wrap {
+    max-width: 1200px;width:100%;margin: 0 auto;
+}
+
+#container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.separator {
+    width:100px;
+    height:3px;
+    background-color: var(--vert);
+    margin: 1rem auto;
+}
+
+/* Header */
+#header {
+    background-color: var(--vert);
+    width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .6rem;
+}
+#header .logo {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 1.9rem;
+}
+#header .logo:hover {
+    opacity: .8;
+}
+#header nav ul {
+    display: flex;
+    flex-flow: row nowrap;
+    gap:.6rem;
+}
+#header nav ul li a:hover {
+    color:#000;
+}
+
+/* INTRO */
+#intro {
+    height:100vh;
+    background: url("https://picsum.photos/id/38/1200/500") no-repeat center center/cover;
+    display: flex;
+}
+#intro > div {
+    max-width: 600px;
+    text-align: center;
+    padding: 1rem;
+    margin: auto;
+    font-size: 1.4rem;
+}
+
+/* component */
+#component {margin: 6rem 0;}
+#component h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+#component ul.boxs {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+#component ul.boxs img {
+    width:100%;
+}
+#component ul.boxs li {
+    width: 31%;
+    background-color: #fff;
+}
+#component ul.boxs li .bloc_text {
+    padding: 1rem;
+    text-align: justify;
+}
+#component .title {
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+

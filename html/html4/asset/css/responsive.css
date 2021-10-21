@@ -1,0 +1,27 @@
+/* RESPONSIVE */
+@media screen and (max-width: 800px) {
+    body {
+        background-color: lime;
+    }
+    #bloc2 .minicontent {
+        width: 31.33333333%;
+    }
+
+}
+
+
+@media screen and (max-width: 600px) {
+    #bloc2 .minicontent {
+        width: 48%;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    #bloc2 .content {
+        margin-left: 0;
+    }
+    #bloc2 .minicontent {
+        width: 100%; margin-left: 0;
+    }
+}
+

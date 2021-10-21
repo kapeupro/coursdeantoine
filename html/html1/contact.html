@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Page contact</title>
+
+    <link rel="stylesheet" href="asset/css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h1>Page Contact</h1>
+
+    <form action="" method="get" novalidate>
+        <fieldset>
+            <legend>Titre groupe de champ</legend>
+
+            <label for="nom">Nom</label>
+            <input type="text" id="nom" name="nom" value="" placeholder="Votre nom" required>
+
+
+        </fieldset>
+
+        <input type="email" name="email" id="email" value=""><br>
+        <input type="password"><br>
+
+        <input type="checkbox" name="fruit[]" value="banane"> Banane<br>
+        <input type="checkbox" name="fruit[]" value="kiwi"> Kiwi<br>
+        <input type="checkbox" checked name="fruit[]" value="papaye"> Papaye<br>
+
+        <input type="radio" name="gender" value="homme"> Homme <br>
+        <input type="radio" name="gender" value="femme"> Femme <br>
+        <input type="radio" name="gender" value="other"> Autres <br>
+
+        <input type="color">
+
+        <input type="date">
+        <input type="datetime-local">
+        <input type="time">
+        <input type="number" min="1" max="12">
+        <input type="url">
+        <input type="hidden" name="article" value="234">
+        <input type="file">
+
+        <textarea placeholder="Votre message" id=""></textarea>
+
+        <select name="" id="">
+            <option value="banane">Banane</option>
+            <option value="kiwi">Kiwi</option>
+            <option value="papaye" selected>Papaye</option>
+        </select>
+
+        <input type="text" name="prenom1" readonly>
+        <input type="text" name="prenom2" disabled>
+
+        <input type="reset" value="Effacer">
+        <input type="submit" value="Envoyer le formulaire">
+    </form>
+
+</body>
+</html>
