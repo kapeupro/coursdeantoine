@@ -142,3 +142,29 @@ strong {
     display:block;
     margin: 1rem auto;
 }
+
+#partenaire {
+    margin: 3rem 0;
+}
+#partenaire img {
+    width:100%;
+    margin-bottom: .6rem;
+}
+
+#partenaire .wrap {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+#partenaire .shadow {
+    width: 23%;
+    background-color: #fff;
+}
+#partenaire i {
+    font-size: 3rem;
+    color: var(--vert);
+    margin: 1rem 0;
+}
