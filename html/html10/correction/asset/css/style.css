@@ -1,0 +1,109 @@
+* {
+    padding: 0;margin: 0;
+}
+ul, ol {list-style: none;}
+/* Pour des raisons de clarté le code ci-dessous n'est pas prefixer
+    il faudra le faire lors de la mise en production
+    https://autoprefixer.github.io/
+*/
+*,
+*:after,
+*:before {
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+}
+/* clear */
+.clear:before,.clear:after { content:' '; display:table; }
+.clear:after { clear:both; }
+.clear { *zoom:1;}
+
+html { font-size:100%; }
+body { font:500 15px/1.4 'Montserrat', sans-serif;color:#3b3b3b; background-color: #fff;
+    overflow-x: hidden;
+}
+
+a { color:grey; text-decoration:none; }
+a:hover  { color:#9D9D9D;}
+a:focus  { outline:0;color:#9D9D9D; }
+a:hover,
+a:active { outline:0; color:#9D9D9D;}
+input:focus { outline:0; border:1px solid #667A83;}
+.aligncenter{ display: block; margin-left: auto; margin-right: auto; }
+.imgcent {width:100%;}
+.text-c {text-align: center;}
+.flex {display: flex;}
+.ulcenter {text-align: center;}
+.ulcenter li {display: inline-block;}
+.upper {text-transform: uppercase;}
+.relative {position: relative;}
+
+.wrap {max-width: 1440px;width:100%;margin: 0 auto;padding: 0 15px;}
+.wrap2 {max-width: 1324px;width:100%;margin: 0 auto;padding: 0 15px;}
+.wrap3 {max-width: 1235px;width:100%;margin: 0 auto;padding: 0 15px;}
+.wrap4 {max-width: 785px;width:100%;margin: 0 auto;padding: 0 15px;}
+.fontAlfa {font-family: 'Alfa Slab One', cursive; }
+.fontBebas {font-family: 'Bebas Neue', cursive; }
+.color_brown {color: #42200b;}
+.bold {font-weight: bold;}
+/**/
+/*color   marron 42200b , rouge df1c1c, noir 3b3b3b, gris dddddd , jaune ffc135 */
+
+#masthead {background-color: #ffc135;}
+#masthead .wrap{position: relative;}
+#masthead #masthead_start {padding: 52px 20px 0 0;display: flex;justify-content: space-between;}
+#masthead #masthead_start .logo img{width:200px;}
+#masthead #masthead_start .delivery{display: flex;align-items: center;font-weight: bold;color: #42200b;}
+#masthead #masthead_start .delivery div{margin-right: 10px;}
+#masthead #masthead_start .delivery img{width:30px;}
+
+#masthead #navigation {position:absolute;top:120px;left:0;z-index:999;width:100%;}
+#masthead #navigation ul{display: flex;justify-content: flex-end;}
+#masthead #navigation ul li{margin-right: 20px;}
+#masthead #navigation ul li a{margin-left: 20px;z-index:999;color: #42200b;text-transform: uppercase;font-family: 'Bebas Neue', cursive;font-size: 1.8em;}
+#masthead #navigation ul li a:hover{opacity: .8;}
+#masthead #masthead_burger {display: flex;}
+#masthead #masthead_burger .mas_burger{width: 50%;margin-bottom: 40px;z-index:9;}
+#masthead #masthead_burger .mas_burger_text{margin-top: 150px;text-transform: uppercase;}
+#masthead #masthead_burger .mas_burger_text p:nth-child(1){font-size: 1.4em;border: dashed 2px #42200b;text-align: center;display: inline-block;padding: 3px 15px;}
+#masthead #masthead_burger .mas_burger_text p:nth-child(2){font-size: 8vw;line-height: 1.3em;text-shadow: 4px 4px 3px rgba(255, 255, 255, 1);}
+#masthead #masthead_burger .mas_burger_text p:nth-child(3){font-size: 4vw;line-height: .5em;text-shadow: 4px 4px 3px rgba(255, 255, 255, 1);}
+#masthead #masthead_burger .mas_burger_img{margin-top: -8%;position:relative;z-index:9;}
+#masthead #masthead_burger .mas_burger_img img{width: 100%;}
+#masthead #masthead_burger .mas_burger_img .rond_rouge{background-color: #df1c1c;color:#fff;height:170px; width: 170px;border-radius:50%;position: absolute;bottom:10px;left:10%;}
+#masthead #masthead_burger .mas_burger_img .trait_blanc{border:2px dashed #fff;height:150px; width: 150px;border-radius:50%;position:absolute;top:10px;left:10px;display: flex;}
+#masthead #masthead_burger .mas_burger_img .price{margin:auto;text-transform: uppercase;font-size: 1.8em; text-align: center;line-height: 1;font-family: 'Bebas Neue', cursive;}
+#masthead #masthead_burger .mas_burger_img .price span{font-size: 2.8em;font-weight: bold; }
+#masthead #masthead_burger .mas_burger_img .price .only{letter-spacing: 15px;margin-left: 15px; }
+
+#group2 {margin: 75px 0 90px 0;}
+#group2 .wrap3{display: flex;justify-content: space-between;}
+#group2 .big_box_img{width: 49%;}
+#group2 .big_box_img .box_img{position: relative;margin-bottom: 39px;}
+#group2 .big_box_img .box_img div{position: absolute;top:30px;left:30px;right:30px;color:#fff;font-weight: bold;text-transform: uppercase;}
+#group2 .big_box_img .box_img div p:nth-child(2){font-size: 1.7em;}
+#group2 .big_box_img img{width: 100%;border-radius: 5px;}
+
+
+
+/* Responsive */
+@media screen and (max-width: 700px) {
+    #masthead #masthead_start {padding: 22px 20px 0 0;}
+    #masthead #masthead_start .logo img{width:150px;margin-right: 10px;}
+    #masthead #masthead_start .delivery{font-size: .8em;}
+    #masthead #masthead_start .delivery div{margin-right: 10px;}
+    #masthead #masthead_start .delivery span{display: none;}
+    #masthead #navigation {top:70px;font-size: .8em;}
+    #masthead #navigation ul{justify-content: center;}
+    #masthead #masthead_burger .mas_burger_text{margin-top: 80px;}
+    #masthead #masthead_burger .mas_burger_img{margin-top: 0;}
+    #masthead #masthead_burger .mas_burger_img .rond_rouge{height:100px; width: 100px;bottom:10px;left:10%;}
+    #masthead #masthead_burger .mas_burger_img .trait_blanc{height:90px; width: 90px;top:5px;left:5px;}
+    #masthead #masthead_burger .mas_burger_img .price{font-size: 1em; }
+    #masthead #masthead_burger .mas_burger_img .price .only{letter-spacing: 5px;margin-left: 5px; }
+
+    h2.bigtitle {font-size: 2.2em;}
+    #group2 {margin: 40px 0 25px 0;}
+    #group2 .wrap3{flex-wrap: wrap;}
+    #group2 .big_box_img{width: 100%;}
+    #group2 .big_box_img .box_img div{top:10px;left:10px;right:10px;line-height: 1;}
+}
