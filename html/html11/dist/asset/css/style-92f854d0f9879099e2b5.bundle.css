@@ -1,0 +1,68 @@
+/*!*************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./src/asset/css/style.scss ***!
+  \*************************************************************************************************************************************************************/
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: blue;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  background: url(../../3dcd13a453661e71f872.jpg) repeat 0 0;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+#header {
+  background-color: #3c5499;
+}
+#header ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+#header ul li {
+  margin: 0 1rem;
+  border: solid blue 2px;
+}
+#header ul li a {
+  color: lime;
+}
+#header ul li a:hover {
+  color: red;
+}
+
+#header {
+  background-color: #3c5499;
+}
+
+#header ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#header ul li {
+  margin: 0 1rem;
+}
+/*!******************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./src/asset/css/responsive.scss ***!
+  \******************************************************************************************************************************************************************/
+
+
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiYXNzZXQvY3NzL3N0eWxlLTkyZjg1NGQwZjk4NzkwOTllMmI1LmJ1bmRsZS5jc3MiLCJtYXBwaW5ncyI6Ijs7O0FBRUE7RUFDRTtFQUFVO0VBQVc7RUFBK0I7QUFFdEQ7O0FBQ0E7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNJO0VBQ0k7RUFDUjtFQUNJO0VBQ0k7RUFDUjtBQUVGOztBQUNBO0VBQVM7QUFHVDs7QUFGQTtFQUNFO0FBS0Y7QUFKRTtFQUNFO0VBQ0E7RUFDQTtBQU1KO0FBTEk7RUFDRTtFQUNBO0FBT047QUFOTTtFQUNFO0FBUVI7QUFQUTtFQUNFO0FBU1Y7O0FBSEE7RUFDRTtBQU1GOztBQUpBO0VBQ0U7RUFDQTtFQUNBO0FBT0Y7O0FBTEE7RUFDRTtBQVFGLEMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9odG1sMTEvaHRtbDExLy4vc3JjL2Fzc2V0L2Nzcy9zdHlsZS5zY3NzIl0sInNvdXJjZXNDb250ZW50IjpbIkBpbXBvcnQgJy4vcGFyYW1ldGVycyc7XHJcblxyXG4qIHtcclxuICBtYXJnaW46IDA7cGFkZGluZzogMDstd2Via2l0LWJveC1zaXppbmc6IGJvcmRlci1ib3g7Ym94LXNpemluZzogYm9yZGVyLWJveDtcclxufVxyXG5cclxuYm9keSB7XHJcbiAgYmFja2dyb3VuZC1jb2xvcjogYmx1ZTtcclxuICBjb2xvcjojZmZmO1xyXG4gIGRpc3BsYXk6IC13ZWJraXQtYm94O1xyXG4gIGRpc3BsYXk6IC1tcy1mbGV4Ym94O1xyXG4gIGRpc3BsYXk6IGZsZXg7XHJcbiAgLXdlYmtpdC1ib3gtb3JpZW50OiBob3Jpem9udGFsO1xyXG4gIC13ZWJraXQtYm94LWRpcmVjdGlvbjogbm9ybWFsO1xyXG4gICAgICAtbXMtZmxleC1mbG93OiByb3cgbm93cmFwO1xyXG4gICAgICAgICAgZmxleC1mbG93OiByb3cgbm93cmFwO1xyXG4gIC13ZWJraXQtYm94LXBhY2s6IGp1c3RpZnk7XHJcbiAgICAgIC1tcy1mbGV4LXBhY2s6IGp1c3RpZnk7XHJcbiAgICAgICAgICBqdXN0aWZ5LWNvbnRlbnQ6IHNwYWNlLWJldHdlZW47XHJcbiAgYmFja2dyb3VuZDogdXJsKFwiLi4vaW1nL3NjaG9vbC5qcGdcIikgcmVwZWF0IDAgMDtcclxufVxyXG5cclxudWwgLCBvbCB7bGlzdC1zdHlsZTogbm9uZX1cclxuI2hlYWRlciB7XHJcbiAgYmFja2dyb3VuZC1jb2xvcjogIzNjNTQ5OTtcclxuICB1bCB7XHJcbiAgICBkaXNwbGF5OiAtd2Via2l0LWJveDtcclxuICAgIGRpc3BsYXk6IC1tcy1mbGV4Ym94O1xyXG4gICAgZGlzcGxheTogZmxleDtcclxuICAgIGxpIHtcclxuICAgICAgbWFyZ2luOiAwICRwYWQ7XHJcbiAgICAgIGJvcmRlcjogc29saWQgJGJsZXUgMnB4O1xyXG4gICAgICBhIHtcclxuICAgICAgICBjb2xvcjpsaW1lO1xyXG4gICAgICAgICY6aG92ZXIge1xyXG4gICAgICAgICAgY29sb3I6cmVkO1xyXG4gICAgICAgIH1cclxuICAgICAgfVxyXG4gICAgfVxyXG4gIH1cclxufVxyXG4jaGVhZGVyIHtcclxuICBiYWNrZ3JvdW5kLWNvbG9yOiAjM2M1NDk5O1xyXG59XHJcbiNoZWFkZXIgdWwge1xyXG4gIGRpc3BsYXk6IC13ZWJraXQtYm94O1xyXG4gIGRpc3BsYXk6IC1tcy1mbGV4Ym94O1xyXG4gIGRpc3BsYXk6IGZsZXg7XHJcbn1cclxuI2hlYWRlciB1bCBsaSB7XHJcbiAgbWFyZ2luOiAwIDFyZW07XHJcbn0iXSwibmFtZXMiOltdLCJzb3VyY2VSb290IjoiIn0=*/

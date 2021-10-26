@@ -1,0 +1,41 @@
+@import './parameters';
+
+* {
+  margin: 0;padding: 0;box-sizing: border-box;
+}
+
+body {
+  background-color: blue;
+  color:#fff;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  background: url("../img/school.jpg") repeat 0 0;
+}
+
+ul , ol {list-style: none}
+#header {
+  background-color: #3c5499;
+  ul {
+    display: flex;
+    li {
+      margin: 0 $pad;
+      border: solid $bleu 2px;
+      a {
+        color:lime;
+        &:hover {
+          color:red;
+        }
+      }
+    }
+  }
+}
+#header {
+  background-color: #3c5499;
+}
+#header ul {
+  display: flex;
+}
+#header ul li {
+  margin: 0 1rem;
+}
