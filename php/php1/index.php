@@ -117,7 +117,110 @@ $html .= '.</p>';
 
 echo '<div>' . $html . '</div>'; // Salut Buzz, je suis en Formation PHP.
 
+// '' vs "" , echappement
+echo "<p class=\"title\">titre 1 </p>";
+echo '<p class="title">titre 1 </p>';
 
+$traitees = 'lu';
+$la = 'ici';
+
+echo 'Les variables sont $traitees $la'; // Les variables sont $traitees $la
+echo "Les variables sont $traitees $la"; // Les variables sont lu ici
+
+// échappement
+echo 'Arnold a dit: I\'ll be back';
+echo "Arnold a dit: \"I'll be back\"";
+echo 'Arnold a dit: "I\'ll be back"';
+
+echo '<br>';
+//=====================================
+// Les conditions --- if elseif else
+//=====================================
+//  Si / Sinon Si / Sinon
+
+$mot1 = 'musique';
+$mot2 = 'sport';
+$mot3 = 'musique';
+
+if($mot1 == $mot2) {
+    echo 'Les mots sont identiques';
+} else {
+    echo 'Les mots sont différents';
+}
+echo '<br>';
+
+$success = false;
+if($success) {
+    echo 'Je suis en succès';
+} else {
+    echo 'Je suis en echec';
+}
+echo $mot1 == $mot3; // true => 1
+echo $mot1 == $mot2; // false => 0
+
+$age = 32;
+
+if($age >= 18) {
+    echo 'Je suis majeur';
+    $majeur = true;
+} else {
+    echo 'Je suis mineur';
+    $majeur = false;
+}
+// Structure Ternaire
+$majeur = ($age >= 18) ? true : false;
+
+echo $majeur == true ? 'Je suis majeur' : 'Vous etes mineur';
+
+// exo
+// moins de 18 => mineur
+// moins de 18 & que moins 6 an => en maternelle
+// sinon si plus de 78 => retraite
+// sinon je suis un actif
+
+if($age < 18) {
+    echo 'je suis mineur';
+    if($age > 6 ){
+        echo ' en maternelle';
+    }
+} elseif ($age > 78) {
+    echo 'Je suis retraité';
+} else {
+    echo 'je suis actif';
+}
+
+if($age > 18):
+    echo 'Plus de 18 ans';
+elseif($age < 6):
+    echo 'Je suis en maternelle';
+endif;
+
+// Switch
+$i = 1;
+if ($i == 0) {
+    echo 'i égal 0';
+} elseif ($i == 1) {
+    echo 'i égal 1';
+} elseif ($i == 2) {
+    echo 'i égal 2';
+} else {
+    echo 'i inconnue';
+}
+
+switch ($i) {
+    case 0:
+        echo 'i égal 0';
+        break;
+    case 1:
+        echo 'i égal 1';
+        break;
+    case 2:
+        echo 'i égal 2';
+        break;
+    default:
+        echo 'i inconnue';
+        break;
+}
 
 
 
