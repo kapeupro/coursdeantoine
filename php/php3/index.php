@@ -94,4 +94,33 @@ for($i = 0; $i < count($fruits); $i++) {
 }
 echo '</div>';
 
+// foreach
+$legumes = array('Courgette','Tomate','Carotte','Blette','Salade');
+foreach ($legumes as $legume) {
+    echo $legume;
+}
+
+echo '<ul>';
+foreach ($musiques as $instrument) {
+    echo '<li>' . $instrument . '</li>';
+}
+echo '</ul>';
+
+echo '<div class="fruits">';
+foreach ($fruits as $fruit) {
+    echo '<div class="fruit">' . $fruit . '</div>';
+}
+echo '</div>';
+
+//$tiroirs = ['clef'];
+$tiroirs = array('clef','monnaie','capote','piles','stylo bic');
+// ul li => for
+// ul li => foreach
+// ul li => for => methode en alternance
+// ul li => foreach => methode en alternance
+
+
+
+
+
 
