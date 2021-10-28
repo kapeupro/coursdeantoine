@@ -118,6 +118,34 @@ $tiroirs = array('clef','monnaie','capote','piles','stylo bic');
 // ul li => foreach
 // ul li => for => methode en alternance
 // ul li => foreach => methode en alternance
+echo '<ul>';
+for($i = 0; $i < count($tiroirs);$i++) {
+    echo '<li>'.$tiroirs[$i].'</li>';
+}
+echo '</ul>';
+
+echo '<ul>';
+foreach ($tiroirs as $tiroir) {
+    echo '<li>' . $tiroir . '</li>';
+}
+echo '</ul>';
+?>
+<ul>
+    <?php for($i = 0; $i < count($tiroirs);$i++) { ?>
+        <li><?= $tiroirs[$i]; ?></li>
+    <?php } ?>
+</ul>
+
+<ul>
+    <?php foreach ($tiroirs as $tiroir) { ?>
+        <li><?= $tiroir; ?></li>
+    <?php } ?>
+</ul>
+
+
+
+
+
 
 
 
