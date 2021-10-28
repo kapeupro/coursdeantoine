@@ -5,12 +5,12 @@ $etudiants = array('Mathieu','Maxence','Alexis','Quentin','Louis');
 echo '<pre>';
 print_r($etudiants);
 echo '</pre>';
-// affichez le 4eme etudiant
+// affichez le 4eme étudiant
 echo $etudiants[3];
-// ajouter un etudiants au tableaux
+// ajouter un étudiants au tableau
 $etudiants[] = 'Anthony';
 $etudiants[] = 'Thibault';
-// modifiez , les deux premiers etudiants, pour voir leur prenom et leur nom
+// modifiez les deux premiers étudiants, pour voir leur prénom et leur nom
 $etudiants[0] .= ' Bey';
 $etudiants[1] .= ' Bossin';
 // foreach
@@ -20,7 +20,7 @@ foreach ($etudiants as $etudiant) {
 //echo '<pre>';
 //print_r($etudiants);
 //echo '</pre>';
-// Contruisez un tableau $nums contenant les nombres de 10 à 20 a l'aide d'un boucle
+// Construisez un tableau $nums contenant les nombres de 10 à 20 a l'aide d'une boucle
 $nums = array();
 for($i = 10;$i <= 20;$i++) {
     $nums[] = $i;

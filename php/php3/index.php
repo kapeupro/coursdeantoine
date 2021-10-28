@@ -52,7 +52,7 @@ for($i = 19; $i <= 67; $i++) {
 }
 
 echo '<br>';
-// affichez toutes les années depuis votre année de naissance jusqu'a aujourd'hui. chaque année dans un p qui possede la class "birth_date"
+// Affichez toutes les années depuis votre année de naissance jusqu'a aujourd'hui. Chaque année dans un p qui possède la class "birth_date"
 $currentYear = date('Y');
 for($i = 1978; $i <= $currentYear; $i++) {
     echo '<p class="birth_date">'.$i.'</p>';
@@ -65,7 +65,7 @@ for($i = 50; $i >= 25;$i--) {
     }
 }
 echo '<br>';
-// affichez , a l'aide de balise html les nombres de 1 à 50. Les nombres de 36 à 47 doivent être en vert les autres en rouge.
+// Affichez , a l'aide de balise html les nombres de 1 à 50. Les nombres de 36 à 47 doivent être en vert les autres en rouge.
 for($i = 1; $i <= 50; $i++) {
 //    $color = 'red';
 //    if( $i >= 36 && $i <= 47 ) {
