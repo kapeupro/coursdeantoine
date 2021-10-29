@@ -133,6 +133,10 @@ $arrayDeOuf = array(
         )
     )
 );
+echo $arrayDeOuf[2]['sdfsd'][2390]['dede'];
+echo '<pre>';
+print_r($arrayDeOuf);
+echo '</pre>';
 
 
 
