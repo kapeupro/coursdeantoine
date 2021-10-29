@@ -66,8 +66,21 @@ echo minus('FHTHJygjh5ghjkj kHKJhk j');
 // div couleur rose , tous les mots doivent commencer par une majuscule.
 $plats = array('Tartiflette', 'pot au feu', ' mousse au chocolat', ' blanquette', 'fondue', 'raclette','Boeuf','quiche lorraine', 'steak tartare', 'banane flambée');
 $defaults = array('avare','paresseux','ennuyant','borné','cruel','distrait','ringard','stupide','superficiel','egoiste');
-
-
-
+$fruits = array('Banane','Kiwi');
+function generateGroupName($tab1,$tab2,$color = 'pink',$balise = 'div')
+{
+//    $randomkey1 = array_rand($tab1);
+//    $randomvalue1 = $tab1[$randomkey1];
+//    $randomkey2 = array_rand($tab2);
+//    $randomvalue2 = $tab2[$randomkey2];
+//    $str = ucwords($randomvalue1 . ' ' . $randomvalue2 );
+    $str = ucwords($tab1[array_rand($tab1)] . ' ' . $tab2[array_rand($tab2)] );
+    return '<'.$balise.' style="color:'.$color.';">' . $str . '</'.$balise.'>';
+}
+echo generateGroupName($plats,$defaults);
+echo generateGroupName($fruits,$defaults);
+echo generateGroupName($plats,$defaults,'green');
+echo generateGroupName($plats,$defaults,'red');
+echo generateGroupName($plats,$defaults,'violet','h1');
 
 
