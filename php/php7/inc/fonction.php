@@ -58,4 +58,16 @@ function minus(string $string) : string
     // return lcfirst($s);
     return lcfirst(strtoupper($string));
 }
+
 echo minus('FHTHJygjh5ghjkj kHKJhk j');
+
+// créer une fonction "generateGroupName" permettant d'afficher une combinaison d'un plat typique français au hasard suivi d'un default
+// ex : tartiflette frustrée
+// div couleur rose , tous les mots doivent commencer par une majuscule.
+$plats = array('Tartiflette', 'pot au feu', ' mousse au chocolat', ' blanquette', 'fondue', 'raclette','Boeuf','quiche lorraine', 'steak tartare', 'banane flambée');
+$defaults = array('avare','paresseux','ennuyant','borné','cruel','distrait','ringard','stupide','superficiel','egoiste');
+
+
+
+
+
