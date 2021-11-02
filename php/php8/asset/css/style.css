@@ -6,3 +6,21 @@ body {
     color:whitesmoke;
 }
 h1 {text-align: center;padding: 1rem 0;}
+h2 {text-align: center;padding: 1rem 0;}
+
+.wrapform {margin: 0 auto;max-width: 500px;width: 100%;padding: 0 1rem;}
+label {display: block;}
+input ,textarea, select {width:100%;margin-bottom: 1rem;}
+input ,textarea {padding: 1rem;}
+textarea {min-height: 150px;resize: vertical;}
+
+input[type=submit] {
+    border: none;
+    background-color: #3c5499;
+    color:#fff;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+input[type=submit]:hover {
+    background-color: #643a79;
+}
