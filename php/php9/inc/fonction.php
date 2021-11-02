@@ -6,3 +6,8 @@ function debug(array $tableau)
     print_r($tableau);
     echo '</pre>';
 }
+
+function imgMovie($film)
+{
+    return '<img src="https://formation.weblitzer.fr/posters/'.$film['id'].'.jpg" alt="'.$film['title'].'">';
+}

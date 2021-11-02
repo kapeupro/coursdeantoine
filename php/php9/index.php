@@ -9,7 +9,7 @@ include('inc/header.php');
 echo '<div id="movies">';
     foreach ($movies as $film) {
         //echo '<p class="movie_title">' . $film['title'] . '</p>';
-        echo '<a href="#" title="'.$film['title'].'"><img src="https://formation.weblitzer.fr/posters/'.$film['id'].'.jpg" alt="'.$film['title'].'"></a>';
+        echo '<a href="detail.php?id='.$film['id'].'" title="'.$film['title'].'">'.imgMovie($film).'</a>';
     }
 echo '</div>';
 
