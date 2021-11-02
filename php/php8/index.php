@@ -14,7 +14,8 @@ if(!empty($_POST['submitted'])) {
     $nom     = trim(strip_tags($_POST['nom']));
     $prenom  = trim(strip_tags($_POST['prenom']));
     $message = trim(strip_tags($_POST['message']));
-    $mail    = trim(strip_tags($_POST['mail']));
+    $mail    = cleanXss('mail');
+    $fruit   = cleanXss('fruit');
     // Validation
     // nom renseigner min 3, max 50
 //    if(!empty($nom)) {
@@ -65,6 +66,11 @@ if(!empty($_POST['submitted'])) {
 //        $errors['mail'] = 'Veuillez renseigner un email';
 //    }
     $errors = emailValidation($errors,$mail,'mail');
+
+    // fruits
+    if(empty($fruit)) {
+        $errors['fruit'] = "Veuillez renseigner un fruit";
+    }
     // If no error
     if(count($errors) == 0) {
         die('ok ici aucune error');
@@ -73,8 +79,8 @@ if(!empty($_POST['submitted'])) {
         // redirection
     }
 }
-debug($_POST);
-debug($errors);
+//debug($_POST);
+//debug($errors);
 
 if(!empty($_POST['submitted2']))  {
     echo 'OK FORMULAIRE SOUMIS 222222222';
@@ -82,8 +88,8 @@ if(!empty($_POST['submitted2']))  {
 include('inc/header.php'); ?>
     <form action="" method="post" class="wrapform" novalidate>
         <label for="nom">Nom *</label>
-        <input type="text" name="nom" id="nom" value="<?php if(!empty($_POST['nom'])) {echo $_POST['nom']; } ?>">
-        <span class="error"><?php if(!empty($errors['nom'])) {echo $errors['nom']; } ?></span>
+        <input type="text" name="nom" id="nom" value="<?php recupInputValue('nom'); ?>">
+        <span class="error"><?php viewError($errors,'nom'); ?></span>
 
         <label for="prenom">Prénom *</label>
         <input type="text" name="prenom" id="prenom" value="<?php if(!empty($_POST['prenom'])) {echo $_POST['prenom']; } ?>">
@@ -93,10 +99,28 @@ include('inc/header.php'); ?>
         <textarea name="message" id="message"><?php if(!empty($_POST['message'])) {echo $_POST['message']; } ?></textarea>
         <span class="error"><?php if(!empty($errors['message'])) {echo $errors['message']; } ?></span>
 
-
         <label for="mail">E-mail</label>
         <input type="email" id="mail" name="mail" value="<?php if(!empty($_POST['mail'])) {echo $_POST['mail']; } ?>">
         <span class="error"><?php if(!empty($errors['mail'])) {echo $errors['mail']; } ?></span>
+        <?php
+            $fruits = array(
+                'banane' => 'Banane',
+                'kiwi' => 'Kiwi',
+                'papaye' => 'Papaye',
+            );
+        ?>
+        <label for="fruit">Fruits</label>
+        <select name="fruit" id="fruit">
+            <option value="">__sélectionnez__</option>
+            <?php foreach ($fruits as $key => $fruit) { ?>
+                <?php if(!empty($_POST['fruit']) && $_POST['fruit'] == $key ) { ?>
+                    <option value="<?php echo $key; ?>" selected><?php echo $fruit; ?></option>
+                <?php } else { ?>
+                    <option value="<?php echo $key; ?>"><?php echo $fruit; ?></option>
+                <?php } ?>
+            <?php } ?>
+        </select>
+        <span class="error"><?php if(!empty($errors['fruit'])) {echo $errors['fruit']; } ?></span>
 
         <input type="submit" name="submitted" value="Envoyer">
     </form>

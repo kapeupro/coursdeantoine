@@ -32,3 +32,21 @@ function emailValidation($errors,$email,$key)
     }
     return $errors;
 }
+
+function cleanXss($key)
+{
+    return trim(strip_tags($_POST[$key]));
+}
+function recupInputValue($key)
+{
+    if(!empty($_POST[$key])) {
+        echo $_POST[$key];
+    }
+}
+
+function viewError($errors,$key)
+{
+    if(!empty($errors[$key])) {
+        echo $errors[$key];
+    }
+}
