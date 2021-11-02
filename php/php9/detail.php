@@ -41,7 +41,7 @@ include('inc/header.php');
         }
         $keySuivant = $currentKey + 1;
         if($currentKey < count($movies) - 1) { ?>
-            <li><a href="detail.php?id=<?php $movies[$keySuivant]['id']; ?>">Suivant</a></li>
+            <li><a href="detail.php?id=<?php echo $movies[$keySuivant]['id']; ?>">Suivant</a></li>
         <?php }
     echo '</ul>';
 
