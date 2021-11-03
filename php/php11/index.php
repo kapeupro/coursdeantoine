@@ -12,7 +12,7 @@ $articles = $query->fetchAll();
 debug($articles);
 
 ?>
-<p><a href="">Ajouter un article</a></p>
+<p><a href="new.php">Ajouter un article</a></p>
 <div class="articles">
     <?php  foreach ($articles as $article) { ?>
         <div class="article">
