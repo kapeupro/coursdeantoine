@@ -14,15 +14,17 @@ if(!empty($_POST['submitted'])) {
 
     // si pas d'erreur
     if(count($errors) == 0) {
-        // insert into ;)
-        // Attention ici pas de sécurité. AIE  => nous verrons cela demain à la première heure
-            // Injection SQL
+
+        // Injection SQL
         $sql = "INSERT INTO article (title,description,created_at) 
-                VALUES ('$title','$description',NOW())";
+                VALUES (:title,:desc,NOW())";
         $query = $pdo->prepare($sql);
+        $query->bindValue(':title',$title,PDO::PARAM_STR);
+        $query->bindValue(':desc',$description,PDO::PARAM_STR);
         $query->execute();
         $success = true;
-        // header('Location: index.php');
+        $newid = $pdo->lastInsertId();
+        header('Location: detail.php?id='.$newid);
     }
 }
 
@@ -44,3 +46,45 @@ include('inc/header.php'); ?>
     </form>
 <?php } ?>
 <?php include('inc/footer.php');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// INJECTION SQL ??????
+//$pseudo = 'michel';
+//$password = '1=1';
+//
+//
+//$sql = "SELECT * FROM user
+//        WHERE password = :pass
+//        AND pseudo = :pseud";
+//$query = $pdo->prepare($sql);
+//$query->bindValue(':pass',$password,PDO::PARAM_STR);
+//$query->bindValue(':pseud',$pseudo,PDO::PARAM_STR);
+//$query->execute();
+//
+//$user = $query->fetch();
+//if(!empty($user)) {
+//    // connexion
+//} else {
+//    // no connexion
+//}
+
+
+
+
+
+

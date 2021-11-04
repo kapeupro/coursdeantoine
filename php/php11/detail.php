@@ -5,10 +5,7 @@ require('inc/pdo.php');
 
 if(!empty($_GET['id']) && is_numeric($_GET['id'])) {
     $id = $_GET['id'];
-    $sql = "SELECT * FROM article WHERE id = $id";
-    $query = $pdo->prepare($sql);
-    $query->execute();
-    $article = $query->fetch();
+    $article = getArticleById($id);
     //debug($article);
     if(empty($article)) {
         die('404');

@@ -9,7 +9,7 @@ $query = $pdo->prepare($sql);
 $query->execute();
 // recuperer les données
 $articles = $query->fetchAll();
-debug($articles);
+//debug($articles);
 
 ?>
 <p><a href="new.php">Ajouter un article</a></p>
@@ -21,8 +21,8 @@ debug($articles);
             <p class="date"><?= date('d/m/Y',strtotime($article['created_at'])); ?></p>
             <ul>
                 <li><a href="detail.php?id=<?= $article['id']; ?>">Voir</a></li>
-                <li><a href="">Update</a></li>
-                <li><a href="">Delete</a></li>
+                <li><a href="update.php?id=<?= $article['id']; ?>">Update</a></li>
+                <li><a href="delete.php?id=<?= $article['id']; ?>" onclick="return confirm('Voulez vous vraiment effacer cet article ?')">Delete</a></li>
             </ul>
         </div>
     <?php } ?>
