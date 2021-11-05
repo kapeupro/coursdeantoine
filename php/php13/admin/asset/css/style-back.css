@@ -1,0 +1,55 @@
+* {
+    margin: 0;padding: 0;box-sizing: border-box;
+}
+body {
+    background-color: #eb7d4b;
+    color:whitesmoke;
+}
+ul, ol {list-style: none;}
+img {
+    width: 100%;
+}
+a {text-decoration: none;}
+.wrap {margin: 0 auto;max-width: 1000px;width: 100%;padding: 0 1rem;}
+.wrapform {margin: 0 auto;max-width: 500px;width: 100%;padding: 0 1rem;}
+label {display: block;}
+input ,textarea, select {width:100%;margin-bottom: 1rem;}
+input ,textarea {padding: 1rem;}
+textarea {min-height: 150px;resize: vertical;}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+table, th, td {
+    border: 1px solid black;
+}
+th, td {
+    padding: .3rem;
+}
+header {
+    padding: 1rem;
+    background-color: #fff;
+    margin-bottom: 1rem;
+}
+header ul{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    gap:2rem;
+}
+header ul li a {color:#000;}
+
+input[type=submit] {
+    border: none;
+    background-color: #fff;
+    color:#3c5499;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+input[type=submit]:hover {
+    background-color: #4f805d;
+    color:#fff;
+}
+.error {
+    color:red;
+}

@@ -1,0 +1,102 @@
+<?php
+
+/**
+ * @param int $limit
+ * @param string $status
+ * @return array|false
+ */
+function getArticles(int $limit = 20, string $status = 'all')
+{
+    global $pdo;
+    if($status == 'all') {
+        $sql = "SELECT * FROM articles ORDER BY created_at DESC LIMIT $limit";
+    } else {
+        $sql = "SELECT * FROM articles WHERE status = '$status' ORDER BY created_at DESC LIMIT $limit";
+    }
+    $query = $pdo->prepare($sql);
+    $query->execute();
+    return $query->fetchAll();
+}
+
+/**
+ * @param $id
+ * @return mixed
+ */
+function getArticleById(int $id){
+
+    global $pdo;
+    $sql = "SELECT * FROM articles WHERE id = :id";
+    $query = $pdo->prepare($sql);
+    $query->bindValue(':id',$id,PDO::PARAM_INT);
+    $query->execute();
+    return $query->fetch();
+}
+
+
+/**
+ * @param $title
+ * @param $auteur
+ * @param $content
+ * @param $status
+ */
+function insertArticle($title, $auteur, $content, $status)
+{
+    global $pdo;
+    $sql = "INSERT INTO articles (title,auteur,content, created_at,status)
+                VALUES (:title,:auteur,:content,NOW(),:status)";
+    $query = $pdo->prepare($sql);
+    $query->bindValue(':title',$title,PDO::PARAM_STR);
+    $query->bindValue(':auteur',$auteur,PDO::PARAM_STR);
+    $query->bindValue(':content',$content,PDO::PARAM_STR);
+    $query->bindValue(':status',$status,PDO::PARAM_STR);
+    $query->execute();
+}
+
+/**
+ * @param $id
+ * @param $title
+ * @param $auteur
+ * @param $content
+ * @param $status
+ */
+function updateArticle(int $id, $title, $auteur, $content, $status)
+{
+    global $pdo;
+    $sql = "UPDATE articles SET title = :title,content = :content,auteur = :auteur,status = :status, modified_at = NOW() WHERE id = :id";
+    $query = $pdo->prepare($sql);
+    $query->bindValue(':title',$title,PDO::PARAM_STR);
+    $query->bindValue(':auteur',$auteur,PDO::PARAM_STR);
+    $query->bindValue(':content',$content,PDO::PARAM_STR);
+    $query->bindValue(':status',$status,PDO::PARAM_STR);
+    $query->bindValue(':id',$id,PDO::PARAM_INT);
+    $query->execute();
+}
+
+/**
+ * @param int $id
+ * @param string $status
+ */
+function changeStatusArticle(int $id, $status = 'publish')
+{
+    global $pdo;
+    $sql = "UPDATE articles SET status = :status, modified_at = NOW() WHERE id = :id";
+    $query = $pdo->prepare($sql);
+    $query->bindValue(':status',$status,PDO::PARAM_STR);
+    $query->bindValue(':id',$id,PDO::PARAM_INT);
+    $query->execute();
+}
+
+
+/**
+ * @param int $id
+ * @return array
+ */
+function getAllcommentsForArticleId(int $id): array
+{
+    global $pdo;
+    $sql = "SELECT * FROM comments WHERE id_article = :id ORDER BY created_at DESC";
+    $query = $pdo->prepare($sql);
+    $query->bindValue(':id',$id,PDO::PARAM_INT);
+    $query->execute();
+    return $query->fetchAll();
+}

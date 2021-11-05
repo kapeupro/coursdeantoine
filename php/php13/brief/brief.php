@@ -46,14 +46,15 @@
 //======================================================================
 
 // Création du fichier newpost.php , lien accesible dans back-office
-// faire un lien de la page dashboard vers le fichier.
+// Faire un lien de la page dashboard vers le fichier.
 // Cette étape comprend le développement du formulaire en HTML et l’enregistrement des informations en base de données.
 // Créez si possible des fonctions pour la validation de formulaire.
+
 //======================================================================
 // Etape 3: Développement du formulaire d’édition d’un article existant. (Back-office)
 //======================================================================
 
-// création du fichier editpost.php , lien accessible dans back-office à partir du listing des articles
+// Création du fichier editpost.php , lien accessible dans back-office à partir du listing des articles
 // Cette étape comprend le développement du formulaire en HTML et l’update des informations en base de données.
 
 //======================================================================
@@ -98,7 +99,7 @@
 
 // SQL dynamique requête sécurisé++ , LIKE
 // utiliser les parametres d'URI, de type search.php?search=motclef
-// creation fichier search.php  à la racine du site et envoyer la recherche vers ce fichier
+// creation fichier search.php à la racine du site et envoyer la recherche vers ce fichier
 // creation formulaire method get vers fichier search.php
 // affichage des articles qui correspondent à la recherche
 
