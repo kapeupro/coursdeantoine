@@ -63,7 +63,8 @@
 //        WHERE col3 = "test";
 //
 //        SELECT col1, col5, col3 FROM table_name
-//        WHERE col2 > 39 AND col3 = "yo"
+//        WHERE col2 > 39
+//        AND col3 = "yo"
 //        ORDER BY col1 DESC
 //        LIMIT 30;
 //
