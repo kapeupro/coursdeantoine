@@ -21,7 +21,7 @@
 
         <form action="search.php" method="get" style="width: 100px">
             <input type="search" name="search" id="search" value="<?php if(!empty($_GET['search'])) {echo $_GET['search'];} ?>">
-            <input type="submit" value="recherche">
+            <input type="submit" value="Recherche">
         </form>
     </header>
 
