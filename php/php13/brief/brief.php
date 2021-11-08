@@ -99,7 +99,7 @@
 
 
 // SQL dynamique requête sécurisé++ , LIKE
-// utiliser les parametres d'URI, de type search.php?search=motclef
+// Utiliser les parametres d'URI, de type search.php?search=motclef
 // creation fichier search.php à la racine du site et envoyer la recherche vers ce fichier
 // creation formulaire method get vers fichier search.php
 // affichage des articles qui correspondent à la recherche

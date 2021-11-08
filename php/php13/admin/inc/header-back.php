@@ -16,6 +16,7 @@
             <li><a href="../index.php">Front</a></li>
             <li><a href="index.php">Dashboard</a></li>
             <li><a href="newpost.php">Ajouter un article</a></li>
+            <li><a href="comments.php">Modération</a></li>
         </ul>
     </nav>
 </header>

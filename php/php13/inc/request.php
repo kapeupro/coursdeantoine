@@ -18,6 +18,16 @@ function getArticles(int $limit = 20, string $status = 'all', $offset = 0)
     return $query->fetchAll();
 }
 
+function getArticleBySearch($search)
+{
+    global $pdo;
+    $sql = "SELECT * FROM articles WHERE title LIKE :search OR content LIKE :search";
+    $query = $pdo->prepare($sql);
+    $query->bindValue(':search','%'.$search.'%',PDO::PARAM_STR);
+    $query->execute();
+    return $query->fetchAll();
+}
+
 function countAllArticles()
 {
     global $pdo;
@@ -100,12 +110,42 @@ function changeStatusArticle(int $id, $status = 'publish')
  * @param int $id
  * @return array
  */
-function getAllcommentsForArticleId(int $id): array
+function getAllcommentsForArticleId(int $id,$status): array
 {
     global $pdo;
-    $sql = "SELECT * FROM comments WHERE id_article = :id ORDER BY created_at DESC";
+    $sql = "SELECT * FROM comments WHERE id_article = :id AND status = :status ORDER BY created_at DESC";
+    $query = $pdo->prepare($sql);
+    $query->bindValue(':id',$id,PDO::PARAM_INT);
+    $query->bindValue(':status',$status,PDO::PARAM_STR);
+    $query->execute();
+    return $query->fetchAll();
+}
+
+function getCommentsWithStatus($status)
+{
+    global $pdo;
+    $sql = "SELECT * FROM comments WHERE status = :status ORDER BY created_at DESC";
+    $query = $pdo->prepare($sql);
+    $query->bindValue(':status',$status,PDO::PARAM_STR);
+    $query->execute();
+    return $query->fetchAll();
+}
+
+function getCommentById($id) {
+    global $pdo;
+    $sql = "SELECT * FROM comments WHERE id = :id";
     $query = $pdo->prepare($sql);
     $query->bindValue(':id',$id,PDO::PARAM_INT);
     $query->execute();
-    return $query->fetchAll();
+    return $query->fetch();
+}
+
+function changestatusComment($id,$status)
+{
+    global $pdo;
+    $sql = "UPDATE comments SET status = :status, modified_at = NOW() WHERE id = :id";
+    $query = $pdo->prepare($sql);
+    $query->bindValue(':status',$status,PDO::PARAM_STR);
+    $query->bindValue(':id',$id,PDO::PARAM_INT);
+    $query->execute();
 }

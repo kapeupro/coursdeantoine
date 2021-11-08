@@ -15,10 +15,11 @@ if(!empty($_GET['id']) && is_numeric($_GET['id'])) {
 }
 // En attente de la mise en place de la modération
 // aller chercher que les comments avec le status publish , A faire plus tard +++
-$comments = getAllcommentsForArticleId($id);
+$comments = getAllcommentsForArticleId($id,'publish');
 
 
 $errors = [];
+$success = false;
 if(!empty($_POST['submitted'])) {
     $auteur = cleanXss('auteur');
     $content = cleanXss('content');
@@ -32,7 +33,8 @@ if(!empty($_POST['submitted'])) {
         $query->bindValue(':content',$content,PDO::PARAM_STR);
         $query->bindValue(':idarticle',$id,PDO::PARAM_INT);
         $query->execute();
-        header('Location: single.php?id='.$id);
+        $success = true;
+        //header('Location: single.php?id='.$id);
     }
 }
 
@@ -53,17 +55,22 @@ include('inc/header.php'); ?>
 <br>
 <br>
     <h2>Ajouter un commentaire</h2>
-    <form action="" method="post" class="wrapform" novalidate>
-        <label for="auteur">Auteur *</label>
-        <input type="text" id="auteur" name="auteur" value="<?= recupInputValue('auteur'); ?>">
-        <span class="error"><?= viewError($errors,'auteur'); ?></span>
 
-        <label for="content">content *</label>
-        <textarea name="content"><?= recupInputValue('content'); ?></textarea>
-        <span class="error"><?= viewError($errors,'content'); ?></span>
+    <?php if($success) { ?>
+        <p>Merci pour votre commenatire, notre equipe le validera dans les plus brefs delais</p>
+    <?php } else { ?>
+        <form action="" method="post" class="wrapform" novalidate>
+            <label for="auteur">Auteur *</label>
+            <input type="text" id="auteur" name="auteur" value="<?= recupInputValue('auteur'); ?>">
+            <span class="error"><?= viewError($errors,'auteur'); ?></span>
 
-        <input type="submit" name="submitted" value="Ajouter">
-    </form>
+            <label for="content">content *</label>
+            <textarea name="content"><?= recupInputValue('content'); ?></textarea>
+            <span class="error"><?= viewError($errors,'content'); ?></span>
+
+            <input type="submit" name="submitted" value="Ajouter">
+        </form>
+    <?php } ?>
 
     <?php if(!empty($comments)) { ?>
         <h2>Les commentaire</h2>

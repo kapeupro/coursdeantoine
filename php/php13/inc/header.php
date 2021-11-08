@@ -18,7 +18,14 @@
                 <li><a href="admin/index.php">Back-office</a></li>
             </ul>
         </nav>
+
+        <form action="search.php" method="get" style="width: 100px">
+            <input type="search" name="search" id="search" value="<?php if(!empty($_GET['search'])) {echo $_GET['search'];} ?>">
+            <input type="submit" value="recherche">
+        </form>
     </header>
+
+
 
     <div class="wrap">
 
