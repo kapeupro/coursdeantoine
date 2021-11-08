@@ -97,6 +97,7 @@
 // Etape 10: SYSTEME DE FILTRE/recherche
 //======================================================================
 
+
 // SQL dynamique requête sécurisé++ , LIKE
 // utiliser les parametres d'URI, de type search.php?search=motclef
 // creation fichier search.php à la racine du site et envoyer la recherche vers ce fichier

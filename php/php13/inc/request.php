@@ -5,17 +5,26 @@
  * @param string $status
  * @return array|false
  */
-function getArticles(int $limit = 20, string $status = 'all')
+function getArticles(int $limit = 20, string $status = 'all', $offset = 0)
 {
     global $pdo;
     if($status == 'all') {
-        $sql = "SELECT * FROM articles ORDER BY created_at DESC LIMIT $limit";
+        $sql = "SELECT * FROM articles ORDER BY created_at DESC LIMIT $limit OFFSET $offset";
     } else {
-        $sql = "SELECT * FROM articles WHERE status = '$status' ORDER BY created_at DESC LIMIT $limit";
+        $sql = "SELECT * FROM articles WHERE status = '$status' ORDER BY created_at DESC LIMIT $limit OFFSET $offset";
     }
     $query = $pdo->prepare($sql);
     $query->execute();
     return $query->fetchAll();
+}
+
+function countAllArticles()
+{
+    global $pdo;
+    $sql = "SELECT COUNT(id) FROM articles";
+    $query = $pdo->prepare($sql);
+    $query->execute();
+    return $query->fetchColumn();
 }
 
 /**

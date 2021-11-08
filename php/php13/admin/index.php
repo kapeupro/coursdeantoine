@@ -1,14 +1,30 @@
 <?php
 
+require('../vendor/autoload.php');
 require('../inc/pdo.php');
 require('../inc/request.php');
 require('../inc/fonction.php');
 
-$articles = getArticles(20);
-//debug($articles);
+use JasonGrimes\Paginator;
+
+$currentPage = 1;
+$offset = 0;
+$itemsPerPage = 2;
+
+if(!empty($_GET['page']) && is_numeric($_GET['page'])) {
+    $currentPage = $_GET['page'];
+    $offset = ($currentPage - 1) * $itemsPerPage;
+}
+
+$articles = getArticles($itemsPerPage,'all',$offset);
+
+$totalItems = countAllArticles();
+$urlPattern = '?page=(:num)';
+
+$paginator = new Paginator($totalItems, $itemsPerPage, $currentPage, $urlPattern);
 
 include('inc/header-back.php'); ?>
-
+<?php echo $paginator; ?>
     <table>
         <tr>
             <th>id</th>
@@ -20,7 +36,6 @@ include('inc/header-back.php'); ?>
             <th>status</th>
             <th>Action</th>
         </tr>
-
         <?php foreach ($articles as $article) { ?>
             <tr>
                 <td><?= $article['id']; ?></td>
@@ -41,4 +56,5 @@ include('inc/header-back.php'); ?>
             </tr>
         <?php } ?>
     </table>
+<?php echo $paginator; ?>
 <?php include('inc/footer-back.php');
