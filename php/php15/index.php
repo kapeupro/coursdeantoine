@@ -33,12 +33,13 @@
         // password
 
 session_start();
-debug($_SESSION);
+
 
 require('inc/pdo.php');
 require('inc/fonction.php');
 require('inc/request.php');
 
+debug($_SESSION);
 
 include('inc/header.php');
 

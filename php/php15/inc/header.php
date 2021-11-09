@@ -17,6 +17,9 @@
 
                 <li><a href="register.php">Inscription</a></li>
                 <li><a href="login.php">Connexion</a></li>
+
+
+                <li><a href="logout.php">deconnexion</a></li>
             </ul>
         </nav>
     </header>
