@@ -7,6 +7,7 @@ $movies = getMovies(24);
 //debug($movies);
 
 include('inc/header.php'); ?>
+
 <div id="movies">
     <?php foreach ($movies as $movie) { ?>
         <div class="movie">
