@@ -21,7 +21,7 @@ if(!empty($_POST['submitted'])) {
     if(!empty($user)) {  // si user exist => $user
         // password_verify
         if(password_verify($password, $user['password'])) {
-            $_SESSION['user'] = array(
+            $_SESSION['user45376'] = array(
                 'id'      => $user['id'],
                 'email'   => $user['email'],
                 'pseudo'  => $user['pseudo'],

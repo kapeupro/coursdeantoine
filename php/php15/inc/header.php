@@ -5,23 +5,22 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Inscription/Connexion</title>
-
     <link rel="stylesheet" href="asset/css/style.css">
 </head>
 <body>
-
     <header>
         <nav>
             <ul>
                 <li><a href="index.php">Home</a></li>
-
-                <li><a href="register.php">Inscription</a></li>
-                <li><a href="login.php">Connexion</a></li>
-
-
-                <li><a href="logout.php">deconnexion</a></li>
+                <?php if(isLogged()) { ?>
+                    <li><a href="logout.php">Logout</a></li>
+                    <?php if(isAdmin()) { ?>
+                        <li><a href="admin/index.php">Admin</a></li>
+                    <?php } ?>
+                <?php } else { ?>
+                    <li><a href="register.php">Inscription</a></li>
+                    <li><a href="login.php">Connexion</a></li>
+                <?php } ?>
             </ul>
         </nav>
     </header>
-
-
