@@ -32,6 +32,8 @@
         // pseudo or email
         // password
 
+session_start();
+debug($_SESSION);
 
 require('inc/pdo.php');
 require('inc/fonction.php');

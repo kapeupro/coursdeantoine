@@ -43,6 +43,8 @@ if(!empty($_POST['submitted'])) {
     } else {
         $errors['password'] = 'Veuillez renseigner un mot de passe';
     }
+
+
     if(count($errors) == 0) {
         // generate token
         $token = generateRandomString(100);

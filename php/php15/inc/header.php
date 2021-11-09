@@ -14,7 +14,9 @@
         <nav>
             <ul>
                 <li><a href="index.php">Home</a></li>
+
                 <li><a href="register.php">Inscription</a></li>
+                <li><a href="login.php">Connexion</a></li>
             </ul>
         </nav>
     </header>
