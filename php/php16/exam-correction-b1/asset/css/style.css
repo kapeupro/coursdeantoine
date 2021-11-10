@@ -1,0 +1,169 @@
+* {
+    padding: 0;margin:0;
+}
+*,
+*:after,
+*:before {
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box; /* Firefox, other Gecko */
+    box-sizing: border-box; /* Opera/IE 8+ */
+}
+ol, ul {
+    list-style: none;
+}
+html {
+    scroll-behavior: smooth;
+}
+/* FONT */
+@font-face {
+    font-family: 'sfrregular';
+    src: url('../font/sfr-1.0-regular-webfont.woff2') format('woff2'),
+    url('../font/sfr-1.0-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'sfrbold';
+    src: url('../font/sfr-1.0-bold-webfont.woff2') format('woff2'),
+    url('../font/sfr-1.0-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {font-family: 'sfrregular';font-size: 16px;font-weight: 400;color:#000;}
+.wrap {
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+.wrap2 {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+}
+.wrap3 {
+    width: 100%;
+    max-width: 615px;
+    margin: 0 auto;
+}
+/* HEADER */
+header {
+    padding: 1.5rem;
+    background-color: white;
+}
+header .wrap2 {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+header .logo img{
+    width:205px;
+
+}
+header nav ul {
+    display: flex;
+}
+header nav ul li{margin-left: 70px;}
+header nav ul li a{text-decoration: none;color:#000;}
+header nav ul li a:hover{color:#444;}
+header nav ul li a:hover img{opacity: .7;}
+header nav ul li img{width:62px;display: block;margin: 0 auto;}
+header nav ul li img.imgmenu2{width:35px;}
+header nav ul li p{text-align: center;margin-top: 8px;font-weight: bold;}
+/* FOOTER */
+footer {height:200px;background-color: #000;color:#fff;padding-top: 47px;}
+footer a{color:#fff;}
+footer .minifleche{cursor:pointer;width:30px;height: 16px;margin:0 auto 17px auto;background: url('../img/mini-fleche.png') no-repeat 0 0;}
+footer .minifleche:hover {opacity: .7;}
+footer ul{text-align: center;}
+footer ul li{display: inline-block;}
+footer ul li{border-left:1px solid #fff;padding-right: 7px;padding-left: 9px;}
+footer ul li:first-child{border:none;}
+footer ul li a{text-decoration: none;}
+footer ul li a:hover{color:#ccc;}
+/* SLIDE */
+#slider {position: relative;}
+#slider img{width:100%;}
+#slider .boiteencadre{
+    position: absolute;top:15%;left:10%;
+    width:28%;height:67%;
+    padding: 11% 2% 0 2%;
+    font-size: 3.7vw;font-family: 'sfrbold';
+    color: #fff;
+    text-transform: uppercase;
+    -webkit-box-shadow: 0px 0px 19px 18px rgba(255,255,255,1);
+    -moz-box-shadow: 0px 0px 19px 18px rgba(255,255,255,1);
+    box-shadow: 0px 0px 19px 18px rgba(255,255,255,1);
+}
+/* FORMULAIRE */
+#formulaire {
+    width:80%;
+    margin: 80px 10% 143px 10%;
+}
+#formulaire ::placeholder { color: #000; opacity: 1;font-weight: 600;}
+#formulaire :-ms-input-placeholder { color: #000; font-weight: 600;}
+#formulaire ::-ms-input-placeholder { color: #000;font-weight: 600;}
+#formulaire input[type=email],#formulaire textarea {
+    font-size: 1.5em;
+    border:2px solid #dddddd;
+    margin-bottom: 3px;
+    padding-left: 10px;
+}
+#formulaire input[type=email]{
+    width:70%;
+    height:55px;
+}
+#formulaire textarea{
+    width:100%;height:205px;
+    margin-top: 30px;padding-top: 10px;
+    resize: none;
+}
+#formulaire input[type=submit]{
+    font-weight:bold;font-size: 1.5em;
+    border: none;
+    padding: 10px 15px;
+    border:2px solid #dddddd;
+    margin-top: 30px;
+    background-color: #fff;
+    cursor:pointer;
+}
+#formulaire input[type=submit]:hover {background-color: #eee;}
+#formulaire input[type=email],#formulaire textarea,#formulaire input[type=submit]{
+    -webkit-box-shadow: 3px 3px 3px 0px rgba(221,221,221,1);
+    -moz-box-shadow: 3px 3px 3px 0px rgba(221,221,221,1);
+    box-shadow: 3px 3px 3px 0px rgba(221,221,221,1);
+}
+.error {color:red;margin-top: 5px;}
+.success {font-size:1.5em;color:green;text-align: center;}
+
+
+/* RESPONSIVE */
+
+@media screen and (min-width: 1600px) {
+    #slider .boiteencadre {
+        font-size: 3.7rem;
+    }
+}
+@media screen and (max-width: 610px) {
+    header {
+        padding: .5rem;
+    }
+    header .logo img{
+        width:105px;
+    }
+    header nav ul {margin-right: 20px;}
+    header nav ul li{margin-left: 20px;}
+    header nav ul li img{width:31px;}
+    header nav ul li img.imgmenu2{width:17px;}
+    header nav ul li p{display: none;}
+
+    #formulaire {
+        width:90%;
+        margin: 80px 5% 143px 5%;
+    }
+    #formulaire input[type=email] {
+        width: 100%;
+    }
+    #formulaire input[type=submit]{width: 100%;}
+}
