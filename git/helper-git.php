@@ -38,3 +38,39 @@
 // git branch -d dev
 
 // git clone
+
+
+////////////////////////////
+/// //  PROCESSS
+///////////////////////////////
+
+// git branch develop
+// git checkout develop
+
+
+/////////////////////////////////////////////////////////
+
+
+// git branch mabranche
+// git checkout mabranche
+
+    // git add .
+    // git commit -m "je viens de finir ma feature sur la branche"
+
+// git checkout develop
+// git pull
+// git merge mabranch
+
+    // si pas de conflits
+        // git push
+    // sinon
+        // gestion des conflits
+            // git add .
+            // git commit -m "gestion des conflits ok"
+            // git push
+
+// git branch -d mabranche
+// git branch mabranche2
+//
+//  etc ......
+
