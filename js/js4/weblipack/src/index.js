@@ -390,3 +390,7 @@ let date = new Date();
 let annee = date.getFullYear();
 console.log(annee);
 // affichez toutes les années depuis votre naissance. Chaque année doit être affichée dans une balise "p", ayant une classe de "birth_date"
+
+for(let i = 1978; i <= annee; i++) {
+    document.write('<p class="birth_date">' + i + '</p>');
+}
