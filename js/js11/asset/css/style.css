@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: gainsboro;
+}
+#boite {
+    width: 200px; height:200px; background-color: green;color:#fff;
+}
+#move {
+    height:200px;
+    width:200px;
+    background-color: #eeff00;
+    border-radius: 50%;
+    position: absolute;
+    top:0;right:0;
+    /*transition: all 1s;*/
+    transition: top 2s, right 5s;
+    z-index: 3;
+}
+
+#move2 {
+    height:200px;
+    width:200px;
+    background-color: green;
+    border-radius: 50%;
+    position: absolute;
+    top:0;right:0;
+    /*transition: all 1s;*/
+    transition: top 2s, right 5s;
+    z-index: 2;
+}
+
+
+section {
+    background-color: grey;
+    padding: 3rem;
+}
