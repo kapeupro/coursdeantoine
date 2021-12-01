@@ -54,4 +54,55 @@ console.log(catid);
 //
 setTimeout(function() {
     infos.innerHTML = 'newtext'
-}, 3000)
+}, 3000);
+
+console.log(input);
+input.focus();
+
+setTimeout(function() {
+    input.blur()
+    input.value = "michel"
+    console.log(input.value);
+}, 1000);
+
+input.type = "email"
+input.placeholder = "ici mettre un prenom d"
+
+input.disabled = true; // désactive input +
+input.disabled = false;
+input.name = 'prenom'
+input.required = true
+
+// modification du css , modification de class
+
+//section.style.backgroundColor = 'blue'
+console.log(section.style);
+
+console.log(section.className); // success
+console.log(section.getAttribute('class')); //
+//section.className = ' error';
+console.log(section.className);
+
+// ClassList
+console.log(section.classList);
+section.classList.add("error")
+setTimeout(function() {
+    section.classList.remove("error")
+},3000)
+
+
+section.classList.toggle("red");
+setTimeout(function() {
+    section.classList.toggle("red");
+},4000);
+
+// si une class existe dans un noeud
+console.log(section.classList.contains('red'));
+
+if(section.classList.contains('blue')) {
+    section.classList.remove('blue');
+} else {
+    section.classList.add('blue');
+}
+
+
