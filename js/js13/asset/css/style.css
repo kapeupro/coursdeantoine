@@ -1,0 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: gainsboro;
+}
+
+.wrap {max-width: 400px;width:100%;margin: 3rem auto;}
+label {display: block;}
+input, textarea, select {width: 100%;padding: .7rem;}
+
+.error {color:red;}
+.success {color:green;}
