@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: gainsboro;
+    font-family: 'Space Mono', monospace;
+}
+#horloge {
+    text-align: center;
+    font-size: 5rem;
+    margin-top: 3rem;
+}
+#horloge span {
+    background-color: black;
+    color:#fff;
+}
+#horloge #day {
+    font-size: 3rem;
+}
