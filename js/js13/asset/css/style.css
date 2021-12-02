@@ -9,8 +9,8 @@ body {
 }
 
 .wrap {max-width: 400px;width:100%;margin: 3rem auto;}
-label {display: block;}
+label {display: block;margin-top: 1rem;}
 input, textarea, select {width: 100%;padding: .7rem;}
-
+input[type=submit] {margin-top: 1rem;}
 .error {color:red;}
 .success {color:green;}

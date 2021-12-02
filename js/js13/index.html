@@ -8,21 +8,30 @@
     <link rel="stylesheet" href="./asset/css/style.css">
 </head>
 <body>
-<div class="wrap">
-    <form action="" method="post">
+    <div class="wrap">
+        <form action="" id="formulaire" method="post">
 
-        <label for="nom">Nom</label>
-        <input type="text" name="nom" id="nom" value="">
-        <span id="error_nom"></span>
+            <label for="nom">Nom</label>
+            <input type="text" name="nom" id="nom" value="">
+            <span id="error_nom"></span>
 
-        <label for="prenom">Prénom</label>
-        <input type="text" name="prenom" id="prenom" value="">
-        <span id="error_prenom"></span>
+            <label for="prenom">Prénom</label>
+            <input type="text" name="prenom" id="prenom" value="">
+            <span id="error_prenom"></span>
 
+            <label for="fruits">Fruits</label>
+            <select name="fruits" id="fruits">
+                <option value="banane">Banane</option>
+                <option value="kiwi">Kiwi</option>
+                <option value="papaye">Papaye</option>
+            </select>
 
+            <input type="submit">
 
-    </form>
-</div>
+        </form>
+
+        <div id="js_response"></div>
+    </div>
     <script src="./asset/js/main.js"></script>
 </body>
 </html>
