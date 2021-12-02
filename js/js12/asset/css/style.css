@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: gainsboro;
+}
+
+.ulcenter {
+    text-align: center;
+}
+.ulcenter li {
+    display: inline-block;
+    margin-top: 3rem;
+}
+.ulcenter li a {
+    padding: 1rem 2rem;
+    background-color: green;
+    color:white;
+    border-radius: 3px;
+    text-decoration:none;
+}
+#compteur {
+    width: 100%;
+    margin: 2rem auto;
+    font-size: 7rem;
+    text-align: center;
+}
