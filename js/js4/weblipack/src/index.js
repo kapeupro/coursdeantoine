@@ -394,3 +394,48 @@ console.log(annee);
 for(let i = 1978; i <= annee; i++) {
     document.write('<p class="birth_date">' + i + '</p>');
 }
+
+// affichez , en html, les nombres de 1 à 100, Les chiffres de 40 à 48 et 78 à 89 doivent être en vert et les autres en rouge.
+
+for(let i = 1; i <= 100; i++) {
+    // let color = 'red';
+    // if(i >= 40 && i <= 48 || i >= 78 && i <= 89) {
+    //     color = 'green';
+    // }
+    let color = (i >= 40 && i <= 48 || i >= 78 && i <= 89) ? 'green' : 'red';
+    document.write('<p style="color:' + color + ';">' + i + '</p>');
+}
+
+const fruits = ['papaye','kiwi','banane'];
+console.log(fruits);
+console.table(fruits);
+console.log(fruits.length);
+document.write('<ul>');
+for(let i = 0; i < fruits.length; i++) {
+    document.write('<li>' + fruits[i] + '</li>')
+}
+document.write('</ul>');
+
+fruits.forEach(function(fruit) {
+    document.write(fruit);
+})
+
+const bagnoles = ['gti','bmw','renault sport jante alu','merco', 'fiat punto'];
+
+// div  id="" bagnole
+    // chaque bagnoles dans un h2
+// Avec for et forEach
+
+document.write('<div id="bagnoles">');
+for(let i = 0; i <= bagnoles.length; i++) {
+    document.write('<h2>'+bagnoles[i]+'</h2>');
+}
+bagnoles.forEach(function(car) {
+    document.write('<h2>'+car+'</h2>');
+})
+document.write('</div>');
+
+
+
+
+
