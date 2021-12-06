@@ -162,6 +162,22 @@ $(document).ready(function() {
         })
     });
 
+    // ANIMATION
+    const photo = $('.photo');
+    photo.on('click', function(e) {
+        $(this).animate({
+            top: '+=100px',
+            right: '+=200px'
+        }, 1000,"easeInOutBounce", function() {
+
+            $(this).animate({
+                top: '-=100px',
+                right: '-=200px'
+            }, 2000,"easeOutElastic", function() {
+                $('.head').css('background-color', 'blue');
+            });
+        });
+    });
 });
 
 
