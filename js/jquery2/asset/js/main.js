@@ -108,8 +108,8 @@ $(document).ready(function() {
     });
 
     $(document).on('mousemove', function(e) {
-        console.log(e.pageX);
-        console.log(e.pageY);
+        // console.log(e.pageX);
+        // console.log(e.pageY);
         const log = $('#log');
         log.html('<p>X: '+e.pageX+' / Y: ' + e.pageY + '</p>');
     });
@@ -138,6 +138,29 @@ $(document).ready(function() {
 
 
 
+    const link = $('#js_btn');
+    const boxText = $('#boiteText');
+    link.on('click', function(event) {
+        event.preventDefault();
+        if(boxText.hasClass('noactif')) {
+            boxText.removeClass('noactif');
+            boxText.html('Apparition');
+        } else {
+            boxText.addClass('noactif');
+            boxText.html('disparition');
+        }
+
+        // apparition disparition
+        //link.css('display', 'none');
+        //link.css('visibility', 'hidden');
+        // link.fadeOut(10, function() {
+        //     link.fadeIn(1000);
+        // });
+
+        link.toggle(1000, function() {
+            link.toggle(1000)
+        })
+    });
 
 });
 
