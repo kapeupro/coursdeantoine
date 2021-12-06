@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jquery 2</title>
+
+    <style>
+        * {margin: 0;padding: 0;box-sizing: border-box;}
+        .maclass {
+            background-color: lime; color: yellow;
+        }
+        #boite {
+            width: 300px;
+            height:300px;
+            padding: 20px;
+            margin: 30px;
+            border: 10px solid red;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="wrap">
+        <img src="https://randomuser.me/api/portraits/men/28.jpg" alt="michel">
+        <div class="head">
+            <p>Quidel Antoine</p>
+            <p id="age">1978/06/02</p>
+            <p><a href="mailto:quidelantoine@gmail.com">quidelantoine@gmail.com</a></p>
+        </div>
+
+        <p class="titre" id="titreCV">Développeur Web</p>
+
+        <h2 class="titleSection">Expérience</h2>
+        <p><span class="date">2005</span> Visiteur médicale</p>
+        <p><span class="date">2013</span> Freelance</p>
+        <p><span class="date">2016</span> Formateur</p>
+
+        <h2 class="titleSection">Diplôme</h2>
+        <p><span class="date">2000</span> Bio</p>
+        <p><span class="date">2013</span> Labo pharama</p>
+        <p><span class="date">2016</span> Formateur</p>
+
+        <h2 class="titleSection" id="divers">Extra</h2>
+        <p>Musique</p>
+        <p>Potager</p>
+
+
+        <ul id="monul">
+            <li>item 1
+                <ul>
+                    <li> item 1 - 1
+                        <ul>
+                            <li class="item3">item 1 - 1 - 1</li>
+                            <li>item 1 - 1 - 2</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>item 2</li>
+            <li class="item3">item 3</li>
+        </ul>
+
+
+        <div id="boite">hello</div>
+        <div id="log"></div>
+
+    </div>
+
+
+
+    <p class="para">fdgdfgfd</p>
+    <p class="para"></p>
+    <p class="para">fdgfdsfgsdfgsd</p>
+    <p class="para"></p>
+
+
+    <a id="js_btn" href="">Click ici</a>
+    <div class="actif">
+        Apparition => disparition    ,  disparition  => Apparition
+
+        Apparition  => boite => green
+        disparition => boite => red
+    </div>
+
+
+
+<!--    <script src="asset/js/jquery.js"></script>-->
+<!--    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>-->
+<!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>-->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+<script src="asset/js/main.js"></script>
+
+</body>
+</html>

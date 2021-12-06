@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jquery 1</title>
+</head>
+<body>
+
+    <ul id="monul">
+        <li>0</li>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+    </ul>
+
+    <script>
+        // js
+        // const ul = document.getElementById('monul');
+        // const listes = ul.children;
+        // console.log(listes);
+        // for(let i = 0; i < listes.length; i++) {
+        //     if(i % 2 == 0) {
+        //         listes[i].style.color = "red";
+        //     }
+        // }
+
+
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <script>
+        $('#monul li').filter(':even').css('color', 'red');
+
+    </script>
+
+
+
+</body>
+</html>
