@@ -69,9 +69,21 @@ body {
 #articles .article .article_diapo{
     flex: 1;
 }
-
 #articles .flexslider {
     margin: 0 0 0 0;
+}
+
+.ulcenter {
+    text-align: center;
+
+}
+.ulcenter li {
+    display: inline-block;
+    margin: 1rem 0;
+}
+#voirplus {
+    padding: 1rem;
+    background-color: lime;color:white;
 }
 
 
