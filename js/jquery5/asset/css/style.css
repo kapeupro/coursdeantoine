@@ -52,6 +52,26 @@ body {
     display: none;
 }
 
+#articles .article {
+    display: flex;
+    gap:2rem;
+    padding: 1rem;
+    background-color: #fff;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+}
+#articles .article .article_text{
+    flex:3;
+}
+#articles .article .article_text h2 {
+    margin-bottom: 1rem;
+}
+#articles .article .article_diapo{
+    flex: 1;
+}
 
+#articles .flexslider {
+    margin: 0 0 0 0;
+}
 
 

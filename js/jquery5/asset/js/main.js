@@ -29,4 +29,10 @@ $(window).on('load',function() {
         }
     });
 
+
+    $('.flexArticle').flexslider({
+        controlNav: false,
+    });
+
+
 });
