@@ -13,11 +13,19 @@
     <div id="js_response_1"></div>
 
 
-
     <button id="btn_cocktail">Cocktail</button>
     <div id="js_response_cocktail"></div>
 
+    <button id="js_norris_btn">Norris Joke</button>
+    <div id="js_response_norris"></div>
 
+    <form action="inc/ajaxform.php" method="post" id="formulaire">
+        <label for="nom">Nom *</label>
+        <input type="text" name="nom" id="nom" value="">
+        <span class="error" id="error_nom"></span>
+
+        <input type="submit" name="submitted" value="Envoyer POST with Ajax">
+    </form>
 
 
 

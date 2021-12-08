@@ -47,3 +47,46 @@ $('#btn_cocktail').on('click', function() {
 });
 
 
+const btnNorris = $("#js_norris_btn");
+const responseNorris = $("#js_response_norris");
+btnNorris.on('click', function() {
+    $.ajax({
+        type: "GET",
+        url: "https://api.chucknorris.io/jokes/random",
+        success: function(response) {
+            console.log(response);
+            console.log(response.icon_url);
+            console.log(response.value);
+            responseNorris.html('<p>' + response.value + '</p><img src="' + response.icon_url + '">')
+        }
+    });
+})
+
+const form = $('#formulaire');
+form.on('submit', function(e) {
+    e.preventDefault();
+    //let nom = $("#nom").val();
+    //console.log(nom);
+    $.ajax({
+        type: "POST",
+        // url: "inc/ajaxform.php",
+        // data: {
+        //   nom: nom,
+        // },
+        url: form.attr("action"),
+        data: form.serialize(),
+        //dataType: "json",
+        success: function(response) {
+            console.log(response);
+            $('#error_nom').html(response.errors.nom);
+        }
+    });
+
+});
+
+
+
+
+
+
+
